@@ -4,7 +4,6 @@ async function permittedCharacters() {
   if(process.env.UPPERCASE_LETTERS === "true"){
     permitted.push(..."ABCDEFGHIJKLMNOPQRSTUVWXYZ")
   }
-  //Os ... são chamados de spreds em vez de apagar ele adiciona, com o que já tem dentro 
   if(process.env.LOWERCASE_LETTERS === "true"){
     permitted.push(..."abcdefghijklmnopqrstuvwxyz")
   }
