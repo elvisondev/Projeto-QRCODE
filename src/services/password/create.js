@@ -1,15 +1,17 @@
-import chalk from "chalk"
+import chalk, { chalkStderr } from "chalk"
 import handler from "./handler.js";
 import figureSet from "figures";
 
 //Cria a minha chamada de criar a senha
 async function createPassword () {
   console.log(chalk.green(
-      `${figureSet.tick} Password criada com sucesso`
+      `\n${figureSet.tick} Password criada com sucesso`
+      
   ))
   const password = await handler()
-  
-  console.log(password)
+  console.log("---------------------------------------")
+  console.log(chalk.green("PASSWORD:", chalk.white(password)))
+  console.log("---------------------------------------")
   
 }
 
